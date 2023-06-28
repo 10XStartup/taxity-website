@@ -5,6 +5,10 @@ import Logo from "../assets/Logo.svg";
 import Twitter from "../assets/Twitter.svg";
 import Linkedin from "../assets/Linkedin.svg";
 import WhatsApp from "../assets/WhatsApp.svg";
+import Instagram from "../assets/Instagram.svg";
+import Phone from "../assets/Phone.svg";
+import Message from "../assets/Message.svg";
+import Location from "../assets/Location.svg";
 
 const footData = [
 	{
@@ -19,6 +23,7 @@ const footData = [
 		id: 2,
 		name: "Socials",
 		items: [
+			{ slug: "instagram_icons", name: "Twitter", icon: Instagram },
 			{ slug: "twitter_icons", name: "Twitter", icon: Twitter },
 			{ slug: "linkedin_icons", name: "LinkedIn", icon: Linkedin },
 			{ slug: "whatsapp_icons", name: "WhatsApp", icon: WhatsApp },
@@ -31,10 +36,10 @@ const footData = [
 			{
 				slug: "location",
 				name: ". suite 206 merit mall Apo, Abuja",
-				icon: Twitter,
+				icon: Location,
 			},
-			{ slug: "phone", name: ". +234 9029104210", icon: Twitter },
-			{ slug: "message", name: ". contact@taxity.africa", icon: Twitter },
+			{ slug: "phone", name: ". +234 9029104210", icon: Phone },
+			{ slug: "message", name: ". contact@taxity.africa", icon: Message },
 		],
 	},
 ];
@@ -80,7 +85,7 @@ export default function Footer() {
 							alt="Taxity"
 							className="h-20 w-20 lg:h-10 lg:w-36"
 						/>
-						<p className=" text-white text-sm md:text-base leading-6 mt-6">
+						<p className=" text-white text-sm md:text-base leading-6 mt-6 md:mt-2">
 							Taxity provides affordable transportation options tailored to your
 							needs. Whether you prefer daily regular taxis within your budget,
 							convenient home-to-work rides through a subscription, or a

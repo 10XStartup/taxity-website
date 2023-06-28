@@ -7,6 +7,7 @@ import AppStore from "../app/assets/appstore.svg";
 import Phone from "../app/assets/phone1.svg";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "aos/dist/aos.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {

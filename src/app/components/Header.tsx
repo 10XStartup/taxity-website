@@ -6,8 +6,8 @@ import Phone from "../assets/Phone1.svg";
 
 export const AppStores = () => (
 	<div>
-		<p>Coming soon</p>
-		<div className="w-full flex justify-center lg:justify-between items-center lg:items-start lg:w-fit mt-4">
+		<p className="md:text-start">Coming soon</p>
+		<div className="w-full flex justify-center lg:justify-between items-center md:items-start md:w-fit mt-4">
 			<Image
 				src={GooglePlay}
 				alt="logo"
@@ -26,22 +26,22 @@ export const AppStores = () => (
 
 const Header = () => {
 	return (
-		<header className="lg:h-[80vh] w-screen py-10 bg-[url('assets/background.svg')] bg-cover bg-no-repeat">
+		<header className="md:h-[50vh] lg:h-[80vh] w-screen py-10 bg-[url('assets/background.svg')] bg-cover bg-no-repeat">
 			<article className="w-[90%] h-full mx-auto">
 				<nav>
 					<Image
 						src={Logo}
 						alt="logo"
 						priority={true}
-						className="mx-auto lg:mx-0 w-1/2 lg:w-52"
+						className="mx-auto md:mx-0 w-1/2 md:w-48 lg:w-52"
 					/>
 				</nav>
-				<div className="grid grid-cols-1 justify-items-center lg:justify-items-start md:grid-cols-2 h-full lg:mt-16 mt-10">
-					<div className="h-full lg:h-[70%] w-full flex flex-col justify-between lg:justify-evenly  xl:w-4/5 lg:pr-10 text-center lg:text-start">
-						<h1 className="font-bold text-2xl lg:text-5xl leading-1 text-center lg:text-start">
+				<div className="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-2 h-full lg:mt-16 mt-10">
+					<div className="h-full md:h-[70%] w-full flex flex-col justify-between lg:justify-evenly  xl:w-4/5 lg:pr-10 text-center lg:text-start">
+						<h1 className="font-bold text-2xl lg:text-5xl leading-1 text-center md:text-start">
 							Budget your movement for the month
 						</h1>
-						<p className="text-center text-sm leading-6 lg:text-base lg:text-start xl:pr-14 my-10 lg:my-0">
+						<p className="text-center text-sm leading-6 lg:text-base md:text-start xl:pr-14 my-10 md:my-0">
 							Experience affordable transportation options with Taxity: choose
 							daily regular taxis within your monthly budget, subscribe for
 							convenient home-to-work rides, or enjoy a one-time full-day ride
@@ -49,7 +49,7 @@ const Header = () => {
 						</p>
 						<AppStores />
 					</div>
-					<div className="h-full mt-10 w-full lg:mt-0 lg:h-[70%] ">
+					<div className="h-full mt-10 w-full md:mt-0 md:h-[70%] ">
 						<Image
 							src={Phone}
 							alt="logo"

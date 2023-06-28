@@ -41,12 +41,12 @@ export default function CustomerSupport() {
 		<section className="w-[95%] md:w-[90%]">
 			<article className=" h-full pb-4 w-full mt-20">
 				<div className="w-full h-full">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4">
-						<div className="h-full ">
+					<div className="grid grid-cols-1  lg:grid-cols-2 gap-x-4">
+						<div className="h-full">
 							<Image
 								src={Customer}
 								alt=""
-								className="h-42 lg:w-[500px] object-cover"
+								className="h-42 md:mx-auto lg:mx-0 lg:w-[500px] object-cover"
 								loading="lazy"
 							/>
 
@@ -106,13 +106,13 @@ export default function CustomerSupport() {
 						</div>
 					</div>
 
-					<div className="flex flex-col lg:flex-row lg:justify-between lg:gap-x-4 items-center px-4 mt-16">
+					<div className="flex flex-col md:flex-row lg:justify-between md:gap-x-6 lg:gap-x-4 items-center px-4 mt-16">
 						{data.map((_v) => (
 							<div key={_v.id} className="basis-[45%] my-4 md:my-0">
 								<Image
 									src={_v.icon}
 									alt="tick"
-									className="-mb-4 -ml-5"
+									className="-mb-4 -ml-5 md:ml-0"
 									loading="lazy"
 								/>
 								<h5 className="text-lg mb-3 text-black">{_v.heading}</h5>
