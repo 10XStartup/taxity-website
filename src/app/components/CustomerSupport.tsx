@@ -38,11 +38,11 @@ const data = [
 ];
 export default function CustomerSupport() {
 	return (
-		<section className="w-[95%] md:w-[90%]">
-			<article className=" h-full pb-4 w-full mt-20">
+		<section className="w-[95%] md:w-[90%] ">
+			<article className="h-full pb-4 w-full mt-20 ">
 				<div className="w-full h-full">
-					<div className="grid grid-cols-1  lg:grid-cols-2 gap-x-4">
-						<div className="h-full">
+					<div className="grid grid-cols-1  lg:grid-cols-2 gap-x-4 ">
+						<div className="h-full ">
 							<Image
 								src={Customer}
 								alt=""
@@ -50,7 +50,7 @@ export default function CustomerSupport() {
 								loading="lazy"
 							/>
 
-							<div className="h-42 mt-12  md:hidden flex flex-col justify-center px-3 text-black">
+							<div className="h-42 mt-12  lg:hidden flex flex-col justify-center px-3 text-black ">
 								<h3 className=" font-bold lg:text-4xl">
 									24hours customer support
 								</h3>
@@ -92,7 +92,7 @@ export default function CustomerSupport() {
 								</div>
 							</div>
 						</div>
-						<div className="h-42 hidden md:flex flex-col justify-center px-3 text-black">
+						<div className="h-42 hidden lg:flex flex-col justify-center px-3 text-black">
 							<h3 className=" font-bold lg:text-4xl">
 								24hours customer support
 							</h3>

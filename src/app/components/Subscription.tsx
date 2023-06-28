@@ -227,7 +227,7 @@ export default function Subscription() {
 							</p>
 						</div>
 					</div>
-					<div className="mt-10 lg:mt-0 w-full flex justify-center items-center overflow-x-hidden">
+					<div className="mt-10 lg:mt-0 w-full flex justify-center overflow-x-hidden">
 						{!isLoaded ? (
 							<p>Loading map</p>
 						) : (
