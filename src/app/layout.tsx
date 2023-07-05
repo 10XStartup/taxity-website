@@ -7,8 +7,8 @@ import AppStore from "../app/assets/appstore.svg";
 import Phone from "../app/assets/phone1.svg";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import "aos/dist/aos.css";
-const inter = Inter({ subsets: ["latin"] });
+// import "aos/dist/aos.css";
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
 	title: "Taxity",
@@ -22,12 +22,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body>
-				{/* <main className="h-full w-full max-w-[1024px] mx-auto bg-red-900"> */}
-				<Header />
-				{children}
-				<Footer />
-				{/* </main> */}
+			<body className="bg-white">
+				<main className="h-full w-full max-w-[1440px] mx-auto ">
+					<Header />
+					{children}
+					<Footer />
+				</main>
 			</body>
 		</html>
 	);

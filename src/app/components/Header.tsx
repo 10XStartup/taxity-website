@@ -11,13 +11,13 @@ export const AppStores = () => (
 			<Image
 				src={GooglePlay}
 				alt="logo"
-				className="mr-2 w-20 lg:w-36"
+				className="mr-2 w-27 lg:w-36"
 				loading="lazy"
 			/>
 			<Image
 				src={AppStore}
 				alt="logo"
-				className="w-20 lg:w-36"
+				className="w-27 lg:w-36"
 				loading="lazy"
 			/>
 		</div>
@@ -26,7 +26,7 @@ export const AppStores = () => (
 
 const Header = () => {
 	return (
-		<header className="md:h-[50vh] lg:h-[80vh] w-screen py-10 bg-[url('assets/background.svg')] bg-cover bg-no-repeat">
+		<header className="md:h-[70vh] lg:h-[80vh] w-full py-10 bg-[url('assets/background.svg')] bg-cover bg-no-repeat">
 			<article className="w-[90%] h-full mx-auto">
 				<nav>
 					<Image
@@ -37,7 +37,7 @@ const Header = () => {
 					/>
 				</nav>
 				<div className="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-2 h-full lg:mt-16 mt-10">
-					<div className="h-full md:h-[70%] w-full flex flex-col justify-between lg:justify-evenly  xl:w-4/5 lg:pr-10 text-center lg:text-start">
+					<div className="h-full md:h-[70%] w-full flex flex-col justify-between lg:justify-evenly  xl:w-4/5 lg:pr-10 text-center lg:text-start ">
 						<h1 className="font-bold text-2xl lg:text-5xl leading-1 text-center md:text-start">
 							Budget your movement for the month
 						</h1>

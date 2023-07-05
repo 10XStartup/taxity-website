@@ -46,11 +46,11 @@ export default function WhatWeDo() {
 					</h1>
 				</div>
 
-				<div className="h-full w-full lg:w-[90%] mx-auto  grid grid-cols-1 gap-4  content-between justify-items-center md:grid-cols-2 px-2 md:px-0 mt-6">
+				<div className="h-full w-full lg:w-[90%] mx-auto grid grid-cols-1 gap-4  content-between justify-items-center md:grid-cols-2 px-2 md:px-0 mt-6">
 					{data.map((_v, i) => (
 						<div
 							key={_v.id}
-							className="bg-lightPrimary w-full  p-2  rounded-lg">
+							className="bg-lightPrimary w-full  px-2 pb-4 pt-2 rounded-lg">
 							<div className="flex items-center text-sm  text-primary md:text-lg ">
 								<Image
 									src={_v.icon}
@@ -61,7 +61,7 @@ export default function WhatWeDo() {
 								<h1>{_v.heading}</h1>
 							</div>
 							<div className="mt-3 py-3 px-1 md:px-4">
-								<p className="text-xs text-primary md:text-ms leading-5">
+								<p className="text-sm text-primary md:text-base leading-5 leading-relaxed">
 									{_v.desc}
 								</p>
 							</div>

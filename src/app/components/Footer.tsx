@@ -38,16 +38,26 @@ const footData = [
 				name: ". suite 206 merit mall Apo, Abuja",
 				icon: Location,
 			},
-			{ slug: "phone", name: ". +234 9029104210", icon: Phone },
-			{ slug: "message", name: ". contact@taxity.africa", icon: Message },
+			{
+				slug: "phone",
+				name: ". +2349029104210",
+				icon: Phone,
+				link: "tel:+2349029104210",
+			},
+			{
+				slug: "message",
+				name: ".contact@taxity.africa",
+				icon: Message,
+				link: "mailto:contact@taxity.africa",
+			},
 		],
 	},
 ];
 
 export default function Footer() {
 	return (
-		<footer className="h-[40vh] lg:h-full w-full">
-			<article className="w-[95%] md:w-[90%] mx-auto py-4">
+		<footer className="h-full w-full bg-black">
+			<article className="w-[95%] md:w-[90%] mx-auto py-10">
 				<div className=" w-full h-full flex flex-row justify-between flex-wrap ">
 					{footData.map((_v) => (
 						<div key={_v.id} className="mx-2">
@@ -59,7 +69,9 @@ export default function Footer() {
 											<div
 												key={_v.slug}
 												className="flex flex-col text-sm lg:text-base">
-												<Link href="/" className="flex items-center my-2">
+												<Link
+													href={_v.link || ""}
+													className="flex items-center my-2">
 													{_v.icon ? (
 														<Image
 															src={_v.icon || ""}
@@ -85,7 +97,7 @@ export default function Footer() {
 							alt="Taxity"
 							className="h-20 w-20 lg:h-10 lg:w-36"
 						/>
-						<p className=" text-white text-sm md:text-base leading-6 mt-6 md:mt-2">
+						<p className=" text-white text-sm md:text-base leading-6 md:mt-2 lg:mt-4">
 							Taxity provides affordable transportation options tailored to your
 							needs. Whether you prefer daily regular taxis within your budget,
 							convenient home-to-work rides through a subscription, or a

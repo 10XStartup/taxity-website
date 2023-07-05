@@ -17,8 +17,6 @@ import Loader from "./Loader";
 import Button from "./Button";
 
 export default function Subscription() {
-	// const [text, setText] = useState({});
-
 	const { isLoaded, loadError } = useJsApiLoader({
 		googleMapsApiKey: "AIzaSyBt_vereLcrqPFn0j6AbWYKQKwTNmKzMeo",
 		libraries: ["places"],
@@ -35,6 +33,7 @@ export default function Subscription() {
 	const [loading, setLoading] = useState(false);
 	const [type, setType] = useState("");
 	const [members, setMembers] = useState("");
+	const [twoWay, setTwoWay] = useState(false);
 
 	const CurrencyFormatter = (amount: number): string =>
 		new Intl.NumberFormat("NGN", {
@@ -43,19 +42,19 @@ export default function Subscription() {
 		}).format(amount || 0);
 
 	const handleSubmit = useCallback(
-		async (duration: number, distance: number) => {
+		async (distance: number, duration: number) => {
 			setLoading(true);
 			if (!duration || !distance) return;
 			try {
 				const response = await axios.post(
 					"https://taxity-staging-api.onrender.com/api/v1/ride/subscription-cost",
 					{
-						distance,
 						duration,
+						distance,
 						plan,
-						members,
+						members: Number(members),
 						type,
-						toAndFro: true,
+						toAndFro: twoWay,
 					}
 				);
 				if (response) {
@@ -67,7 +66,7 @@ export default function Subscription() {
 				setLoading(false);
 			}
 		},
-		[members, plan, type]
+		[members, plan, type, twoWay]
 	);
 
 	async function calculateRoute() {
@@ -176,6 +175,15 @@ export default function Subscription() {
 									<option>4</option>
 								</select>
 							) : null}
+							<div className=" flex justify-start items-center">
+								<input
+									type="checkbox"
+									name="toAndFro"
+									onChange={(e) => setTwoWay(() => e.target.checked)}
+									className=" border border-gray my-4 rounded-md py-6 px-6 text-lg text-black lg:text-base mr-3"
+								/>
+								<label className="text-white">Round trip?</label>
+							</div>
 							<Button name="Calculate" type="submit" />
 						</form>
 						{!loading ? (
@@ -186,7 +194,9 @@ export default function Subscription() {
 									</h1>
 								</div>
 								<div className="mt-6">
-									<h3>Breakdown of how we calculate our ride</h3>
+									<h3 className="text-white">
+										Breakdown of how we calculate our ride
+									</h3>
 									<div className="flex items-center justify-between">
 										<div className="flex flex-col mt-3">
 											{[
@@ -222,8 +232,9 @@ export default function Subscription() {
 						<div className="border border-gray mt-6 py-2 rounded-lg flex justify-around items-center px-2 md:w-[80%]  max-w-[423px]">
 							<Image src={Note} alt="" className="h-10 w-10 mr-6" />
 							<p className="text-xs text-white">
-								Observation: At the moment, Taxity ride prices are significantly
-								lower than those of other ride-sharing services in Africa.
+								Note: The above calculation are summed up to the total number
+								and arrived at the final price. Our prices are considerably
+								lower than other ride share service right now.
 							</p>
 						</div>
 					</div>

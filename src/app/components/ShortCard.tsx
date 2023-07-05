@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function ShortCard() {
 	return (
 		<section>
-			<article className="bg-lightPrimary py-4  md:grid md:grid-cols-2 lg:gap-4 content-center lg:px-6 lg:mx-10 md:rounded-xl mt-6">
+			<article className="bg-lightPrimary py-4  md:grid md:grid-cols-2 lg:gap-4 content-center lg:px-6 lg:mx-10 xl:px-4 xl:mx-[4.5rem] md:rounded-xl mt-6 lg:rounded-[30px]">
 				<div className="px-6 mt-6 text-center lg:text-start text-primary ">
 					<h2 className="text-lg md:text-2xl lg:text-3xl font-bold text-center md:text-start ">
 						Are you a driver
