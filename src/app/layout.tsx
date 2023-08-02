@@ -22,11 +22,8 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className="bg-primary">
-				<main className="h-full w-full mx-auto bg-white">
-					{children}
-					{/* <Footer /> */}
-				</main>
+			<body>
+				<main className="h-full w-full mx-auto bg-white">{children}</main>
 			</body>
 		</html>
 	);

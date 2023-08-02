@@ -105,7 +105,7 @@ export const AddRoles = ({
 			<div className="flex justify-start items-center flex-wrap">
 				{suggestDepartment()}
 			</div>
-			<div className="w-full  h-36  rounded-lg p-2 border border-white">
+			<div className="w-full  h-fit rounded-lg p-2 ">
 				<ul className="flex flex-wrap">
 					{tagList()}
 					{/* <input type="text" spellCheck="false" /> */}

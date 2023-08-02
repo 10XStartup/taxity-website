@@ -91,6 +91,7 @@ export default function Subscription() {
 			return;
 		}
 		const directionService = new google.maps.DirectionsService();
+
 		const result = await directionService.route({
 			//the route takes the origin and the destinations and the travel mode
 			origin: originRef.current?.value,
@@ -120,6 +121,20 @@ export default function Subscription() {
 		lat: 9.072264,
 		lng: 7.491302,
 	};
+
+	const handleScriptLoad = useCallback((originRef: any) => {
+		let autoComplete = new google.maps.places.Autocomplete(originRef);
+		autoComplete.setFields(["address_components", "formatted_address"]);
+	}, []);
+	// async function handleScriptLoad({ originRef, destinationRef }) {}
+
+	useEffect(() => {
+		if (isLoaded) {
+			handleScriptLoad(originRef.current);
+			handleScriptLoad(destinationRef.current);
+		}
+		return;
+	}, [handleScriptLoad, isLoaded]);
 
 	return (
 		<section className="md:w-[90%] lg:h-fit  px-4 md:px-0 bg-primary md:rounded-[30px] mt-20 pb-4 lg:pb-10">
