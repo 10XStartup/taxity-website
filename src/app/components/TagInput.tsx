@@ -31,24 +31,28 @@ export const AddRoles = ({
 	// 		e.target.value = "";
 	// 	}
 	// };
+	const addSuggestion = (tag: string[]) => {
+		return setDepartmentSug([...departmentSug, ...tag]);
+	};
 
 	const closeTag = (indx: number) => {
 		setTags([...tags.filter((tag) => tags.indexOf(tag) !== indx)]);
+		addSuggestion([...tags.filter((tag) => tags.indexOf(tag) === indx)]);
 	};
 
-	const onChange = (e: { target: { value: any } }) => {
-		const input = e.target.value;
-		setInputData(input);
-	};
+	// const onChange = (e: { target: { value: any } }) => {
+	// 	const input = e.target.value;
+	// 	setInputData(input);
+	// };
 
-	const onClick = () => {
-		setInputData("");
-		if (!inputData) {
-			return null;
-		} else {
-			setTags([...tags, inputData]);
-		}
-	};
+	// const onClick = () => {
+	// 	setInputData("");
+	// 	if (!inputData) {
+	// 		return null;
+	// 	} else {
+	// 		setTags([...tags, inputData]);
+	// 	}
+	// };
 	const tagList = () => {
 		return tags.map((tag, index) => {
 			return (
