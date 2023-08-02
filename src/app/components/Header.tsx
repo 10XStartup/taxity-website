@@ -36,7 +36,7 @@ const Header = () => {
 						className="mx-auto md:mx-0 w-1/2 md:w-48 lg:w-52"
 					/>
 				</nav>
-				<div className="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-2 h-full lg:mt-16 mt-10">
+				<div className="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-2 h-full lg:mt-16 mt-10 text-white">
 					<div className="h-full md:h-[70%] w-full flex flex-col justify-between lg:justify-evenly  xl:w-4/5 lg:pr-10 text-center lg:text-start ">
 						<h1 className="font-bold text-2xl lg:text-5xl leading-1 text-center md:text-start">
 							Budget your movement for the month

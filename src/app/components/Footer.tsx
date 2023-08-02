@@ -15,18 +15,54 @@ const footData = [
 		id: 1,
 		name: "Navigations",
 		items: [
-			{ slug: "privacy_policy", name: "Privacy Policy", icon: null },
-			{ slug: "term_of_use", name: "Terms of use", icon: null },
+			{
+				slug: "privacy_policy",
+				name: "Terms of use Drivers",
+				icon: null,
+				link: "/drivers-privacy-policy",
+			},
+			{
+				slug: "term_of_use",
+				name: "Terms of use passenger",
+				icon: null,
+				link: "/passenger-privacy-policy",
+			},
+			{
+				slug: "term_of_use",
+				name: "Privacy Policy",
+				icon: null,
+				link: "/terms-of-us",
+			},
 		],
 	},
 	{
 		id: 2,
 		name: "Socials",
 		items: [
-			{ slug: "instagram_icons", name: "Twitter", icon: Instagram },
-			{ slug: "twitter_icons", name: "Twitter", icon: Twitter },
-			{ slug: "linkedin_icons", name: "LinkedIn", icon: Linkedin },
-			{ slug: "whatsapp_icons", name: "WhatsApp", icon: WhatsApp },
+			{
+				slug: "instagram_icons",
+				name: "Twitter",
+				icon: Instagram,
+				link: "https://www.instagram.com/taxityafrica/",
+			},
+			{
+				slug: "twitter_icons",
+				name: "Twitter",
+				icon: Twitter,
+				link: "https://twitter.com/taxityafrica",
+			},
+			{
+				slug: "linkedin_icons",
+				name: "LinkedIn",
+				icon: Linkedin,
+				link: "https://www.linkedin.com/company/taxityafrica1/",
+			},
+			{
+				slug: "whatsapp_icons",
+				name: "WhatsApp",
+				icon: WhatsApp,
+				link: "/passenger-privacy-policy",
+			},
 		],
 	},
 	{
@@ -56,7 +92,7 @@ const footData = [
 
 export default function Footer() {
 	return (
-		<footer className="h-full w-full bg-black">
+		<footer className="h-full w-full bg-black text-white">
 			<article className="w-[95%] md:w-[90%] mx-auto py-10">
 				<div className=" w-full h-full flex flex-row justify-between flex-wrap ">
 					{footData.map((_v) => (
@@ -71,6 +107,7 @@ export default function Footer() {
 												className="flex flex-col text-sm lg:text-base">
 												<Link
 													href={_v.link || ""}
+													target="_blank"
 													className="flex items-center my-2">
 													{_v.icon ? (
 														<Image

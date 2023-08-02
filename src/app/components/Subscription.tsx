@@ -1,7 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import React, { Fragment, useCallback, useRef, useState } from "react";
+import React, {
+	Fragment,
+	useCallback,
+	useEffect,
+	useRef,
+	useState,
+} from "react";
 import Note from "../assets/Note.svg";
 import Phone2 from "../assets/Phone2.svg";
 import Instagram from "../assets/Instagram.svg";
@@ -15,6 +21,9 @@ import {
 import axios from "axios";
 import Loader from "./Loader";
 import Button from "./Button";
+import { AddRoles } from "./TagInput";
+
+// import Input from "./Input";
 
 export default function Subscription() {
 	const { isLoaded, loadError } = useJsApiLoader({
@@ -23,6 +32,8 @@ export default function Subscription() {
 	});
 	const originRef = useRef<any>();
 	const destinationRef = useRef<any>();
+	const startDate = useRef<any>(new Date());
+	const endDate = useRef<any>(new Date());
 	const [distance, setDistance] = useState<number>(0);
 	const [duration, setDuration] = useState<number>(0);
 	const [plan, setPlans] = useState("");
@@ -34,6 +45,7 @@ export default function Subscription() {
 	const [type, setType] = useState("");
 	const [members, setMembers] = useState("");
 	const [twoWay, setTwoWay] = useState(false);
+	const [tags, setTags] = useState<string[]>([]);
 
 	const CurrencyFormatter = (amount: number): string =>
 		new Intl.NumberFormat("NGN", {
@@ -55,6 +67,9 @@ export default function Subscription() {
 						members: Number(members),
 						type,
 						toAndFro: twoWay,
+						startDate: startDate.current?.value,
+						endDate: startDate.current?.value,
+						pickup_days: tags,
 					}
 				);
 				if (response) {
@@ -62,11 +77,10 @@ export default function Subscription() {
 					setResponse(response?.data?.subscription);
 				}
 			} catch (error) {
-				// console.log(error);/
 				setLoading(false);
 			}
 		},
-		[members, plan, type, twoWay]
+		[plan, members, type, twoWay, tags]
 	);
 
 	async function calculateRoute() {
@@ -184,6 +198,36 @@ export default function Subscription() {
 								/>
 								<label className="text-white">Round trip?</label>
 							</div>
+							<div>
+								<label className="text-white text-xs">Start date</label>
+								<input
+									ref={startDate}
+									name="origin"
+									type="date"
+									required
+									className="w-full border border-gray my-4 rounded-md py-2 px-2 text-xs lg:text-base text-black"
+									placeholder="Enter your location"
+								/>
+							</div>
+							<div>
+								<label className="text-white text-xs">End date</label>
+								<input
+									ref={endDate}
+									name="origin"
+									type="date"
+									required
+									className="w-full border border-gray my-4 rounded-md py-2 px-2 text-xs lg:text-base text-black"
+									placeholder="Enter your location"
+								/>
+							</div>
+							<div>
+								<div>
+									<AddRoles
+										tags={tags}
+										setTags={(data: string[]) => setTags(data)}
+									/>
+								</div>
+							</div>
 							<Button name="Calculate" type="submit" />
 						</form>
 						{!loading ? (
@@ -232,9 +276,10 @@ export default function Subscription() {
 						<div className="border border-gray mt-6 py-2 rounded-lg flex justify-around items-center px-2 md:w-[80%]  max-w-[423px]">
 							<Image src={Note} alt="" className="h-10 w-10 mr-6" />
 							<p className="text-xs text-white">
-								Note: The above calculation are summed up to the total number
-								and arrived at the final price. Our prices are considerably
-								lower than other ride share service right now.
+								Please note that the calculations mentioned above are added
+								together to determine the total number of days and calculate the
+								final price. Currently, our prices are significantly more
+								affordable compared to other ride-sharing services.
 							</p>
 						</div>
 					</div>

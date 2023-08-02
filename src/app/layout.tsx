@@ -22,11 +22,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className="bg-white">
-				<main className="h-full w-full max-w-[1440px] mx-auto ">
-					<Header />
+			<body className="bg-primary">
+				<main className="h-full w-full mx-auto bg-white">
 					{children}
-					<Footer />
+					{/* <Footer /> */}
 				</main>
 			</body>
 		</html>
