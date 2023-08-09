@@ -59,7 +59,7 @@ export default function Subscription() {
 			if (!duration || !distance) return;
 			try {
 				const response = await axios.post(
-					"https://taxity-staging-api.onrender.com/api/v1/ride/subscription-cost",
+					"https://api.taxity.africa/api/v1/ride/subscription-cost",
 					{
 						duration,
 						distance,
