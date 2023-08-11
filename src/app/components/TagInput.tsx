@@ -90,7 +90,7 @@ export const AddRoles = ({
 					style={{ cursor: "pointer" }}
 					className="bg-white text-primary text-sm w-fit flex rounded-lg px-3 py-2  m-2"
 					onClick={() => {
-						setTags([...tags, tag]);
+						setTags([...tags, tag.toLowerCase()]);
 						removeSuggestion(tag);
 					}}>
 					{tag}

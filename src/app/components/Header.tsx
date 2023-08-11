@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Logo from "../assets/Logo.svg";
-import GooglePlay from "../assets/GooglePlay.svg";
-import AppStore from "../assets/AppStore.svg";
+import GooglePlay from "../assets/googleplay.svg";
+import AppStore from "../assets/appStore.svg";
 import Phone from "../assets/Phone1.svg";
 
 export const AppStores = () => (

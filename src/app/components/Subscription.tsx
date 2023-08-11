@@ -68,13 +68,13 @@ export default function Subscription() {
 						type,
 						toAndFro: twoWay,
 						startDate: startDate.current?.value,
-						endDate: startDate.current?.value,
+						endDate: endDate.current?.value,
 						pickup_days: tags,
 					}
 				);
 				if (response) {
 					setLoading(false);
-					setResponse(response?.data?.subscription);
+					setResponse(response?.data?.rideCost);
 				}
 			} catch (error) {
 				setLoading(false);
