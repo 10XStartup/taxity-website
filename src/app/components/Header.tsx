@@ -1,32 +1,32 @@
 import Image from "next/image";
 import Logo from "../assets/Logo.svg";
-import GooglePlay from "../assets/googleplay.svg";
-import AppStore from "../assets/appStore.svg";
+// import GooglePlay from "../assets/googleplay.svg";
+// import AppStore from "../assets/appStore.svg";
 import Phone from "../assets/Phone1.svg";
 
-export const AppStores = () => (
-	<div>
-		<p className="md:text-start">Coming soon</p>
-		<div className="w-full flex justify-center lg:justify-between items-center md:items-start md:w-fit mt-4">
-			<Image
-				src={GooglePlay}
-				alt="logo"
-				className="mr-2 w-27 lg:w-36"
-				loading="lazy"
-			/>
-			<Image
-				src={AppStore}
-				alt="logo"
-				className="w-27 lg:w-36"
-				loading="lazy"
-			/>
-		</div>
-	</div>
-);
+// export const AppStores = () => (
+// 	<div>
+// 		<p className="md:text-start">Coming soon</p>
+// 		<div className="w-full flex justify-center lg:justify-between items-center md:items-start md:w-fit mt-4">
+// 			<Image
+// 				src={GooglePlay}
+// 				alt="logo"
+// 				className="mr-2 w-27 lg:w-36"
+// 				loading="lazy"
+// 			/>
+// 			<Image
+// 				src={AppStore}
+// 				alt="logo"
+// 				className="w-27 lg:w-36"
+// 				loading="lazy"
+// 			/>
+// 		</div>
+// 	</div>
+// );
 
 const Header = () => {
 	return (
-		<header className="md:h-[70vh] lg:h-[80vh] w-full py-10 bg-[url('assets/background.svg')] bg-cover bg-no-repeat">
+		<header className="md:h-[70vh] lg:h-[80vh] xxl:h-[70vh] w-full py-10 bg-[url('assets/background.svg')] bg-cover bg-no-repeat">
 			<article className="w-[90%] h-full mx-auto">
 				<nav>
 					<Image
@@ -47,7 +47,7 @@ const Header = () => {
 							convenient home-to-work rides, or enjoy a one-time full-day ride
 							at a fixed fee
 						</p>
-						<AppStores />
+						{/* <AppStores /> */}
 					</div>
 					<div className="h-full mt-10 w-full md:mt-0 md:h-[70%] ">
 						<Image
