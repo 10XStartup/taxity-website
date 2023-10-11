@@ -32,8 +32,8 @@ export default function Home() {
 		<section className="bg-white w-screen h-screen overflow-hidden bg-[url('assets/background.svg')] bg-cover bg-center bg-no-repeat">
 			<article className="h-full max-w-screen-xl">
 				<Header />
-				<div className=" h-full w-full px-2 md:px-4 lg:px-6 py-4 flex pt-20 flex-col items-center gap-y-10">
-					<div className="lg:w-[90%] lg:h-[256px] py-4 md:py-0 bg-[#F0FBF8] md:rounded-[47px] flex justify-center flex-col items-center px-2 md:px-4 gap-y-10">
+				<div className="h-full w-full px-2 md:px-4 lg:px-6 py-4 flex pt-12  md:pt-0 flex-col items-center gap-y-10">
+					<div className="md:w-[95%] lg:w-[90%] md:h-[256px] py-4 md:py-0 bg-[#F0FBF8] md:rounded-[47px] mt-0 md:mt-36 flex justify-center flex-col items-center px-2 md:px-4 gap-y-10">
 						<h1 className="text-xl md:text-4xl text-center text-black">
 							Taxity, the{" "}
 							<span className="text-primary-light">subscription</span> and
@@ -52,7 +52,7 @@ export default function Home() {
 								src={PlayStore}
 								alt="playstore"
 								loading="eager"
-								className="w-24 object-cover"
+								className="w-24 md:w-36 object-cover"
 							/>
 						</Link>
 						<Link href="https://play.google.com/store/apps/details?id=com.app.taxity.android">
@@ -60,7 +60,7 @@ export default function Home() {
 								src={PlayStore}
 								alt="playstore"
 								loading="eager"
-								className="w-24 object-cover"
+								className="w-24 md:w-36 object-cover"
 							/>
 						</Link>
 					</div>
