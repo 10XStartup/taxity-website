@@ -1,5 +1,5 @@
 import React from "react";
-import { AppStores } from "./Header";
+// import { AppStores } from "./Header";
 import Driver from "../assets/Driver.svg";
 import Image from "next/image";
 
@@ -18,7 +18,7 @@ export default function ShortCard() {
 						not necessarily need a smartphone to start. but as a ride-hailing
 						driver quickly install our app and get started.
 					</p>
-					<AppStores />
+					{/* <AppStores /> */}
 				</div>
 				<div className="hidden md:block ">
 					<Image src={Driver} loading="lazy" alt="" />
