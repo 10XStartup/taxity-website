@@ -32,18 +32,18 @@ export default function RootLayout({
 }) {
 	const location = usePathname();
 
-	console.log(location);
 	const active = (path: string) =>
 		location === path
 			? "bg-white text-primary-dark font-bold"
 			: "text-white bg-primary-dark";
 	return (
 		<html lang="en">
-			<body>
-				<main className="h-full w-full mx-auto ">
+			<body className=" bg-red-400 h-screen w-screen  bg-[url('assets/background.svg')]  bg-cover bg-center bg-no-repeat  ">
+				<main className="h-screen overflow-hidden  w-full  mx-auto ">
+					<Header />
 					<section>{children}</section>
 					<nav className="w-full ">
-						<div className="fixed shadow-lg p-2 md:px-4 z-50 w-[95%] h-12 max-w-lg -translate-x-1/2  bg-primary-dark border border-primary-dark rounded-[14px] bottom-4 md:bottom-14 left-1/2 dark:bg-gray-700 dark:border-gray-600 ">
+						<div className="fixed shadow-lg p-2 md:px-4 z-50 w-[95%] h-12 md:h-14 max-w-xl -translate-x-1/2  bg-primary-dark border border-primary-dark rounded-[14px] bottom-4 md:bottom-14 left-1/2 dark:bg-gray-700 dark:border-gray-600 ">
 							<div className="grid h-full max-w-lg grid-cols-4 mx-auto">
 								{links.map((d) => (
 									<Link
@@ -54,7 +54,7 @@ export default function RootLayout({
 										className={`inline-flex ${active(
 											d.link
 										)} rounded-lg flex-col items-center justify-center px-1  hover:bg-gray-50 dark:hover:bg-gray-800`}>
-										<span className=" text-[10px] md:text-sm ">{d.name}</span>
+										<span className="text-[10px] md:text-base ">{d.name}</span>
 									</Link>
 								))}
 							</div>

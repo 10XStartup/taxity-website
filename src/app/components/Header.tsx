@@ -26,14 +26,14 @@ import Phone from "../assets/Phone1.svg";
 
 const Header = () => {
 	return (
-		<header className=" w-full py-10">
+		<header className=" w-full max-w-screen-xl mx-auto py-4">
 			<article className="w-[90%] h-full mx-auto">
 				<nav>
 					<Image
 						src={Logo}
 						alt="logo"
 						priority={true}
-						className="mx-auto md:mx-0 w-1/2 md:w-48 lg:w-52"
+						className="mx-auto md:mx-0 w-1/2 md:w-36 lg:w-48"
 					/>
 				</nav>
 			</article>
