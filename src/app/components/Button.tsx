@@ -4,7 +4,7 @@ export default function Button({
 	name,
 	onClick,
 	type,
-	styles = "w-full py-2  mt-3 rounded-lg bg-transparent border border-gray text-white",
+	styles = "w-full py-2  mt-3 rounded-lg bg-primary-dark shadow-lg text-white",
 }: {
 	name: string;
 	type: "button" | "submit" | "reset";
