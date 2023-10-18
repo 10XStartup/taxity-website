@@ -1,7 +1,6 @@
 "use client";
-import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import Link from "next/link";
-import React, { useCallback, useEffect } from "react";
+import React from "react";
 import PhoneIcon from "@/app/assets/PhoneIcon.svg";
 import WhatappIcon from "@/app/assets/WhatappIcon.svg";
 import LocationIcon from "@/app/assets/LocationIcon.svg";
@@ -32,40 +31,9 @@ const data = [
 ];
 
 export default function Contact() {
-	const { isLoaded, loadError } = useJsApiLoader({
-		googleMapsApiKey: "AIzaSyCDfI1GOcaZ2W3xQZyWwN_d2ZUzMufGSS4",
-	});
-	const containerStyle = {
-		width: "100%",
-		height: "100%",
-	};
-
-	const center = { lat: 9.0765, lng: 7.3986 };
-
-	const location = {
-		lat: 9.0322968,
-		lng: 7.465841,
-	};
-	const handleScriptLoad = useCallback(() => {
-		const directionService = new google.maps.DirectionsService();
-	}, []);
-
-	useEffect(() => {
-		if (isLoaded) {
-			handleScriptLoad();
-		}
-		return;
-	}, [handleScriptLoad, isLoaded]);
-
 	return (
 		<section className="w-screen bg-center bg-cover md:pt-24">
 			<article className="flex items-start h-full max-w-screen-xl  mx-auto  md:shadow-lg bg-white rounded-xl lg:mt-0 md:px-6">
-				{/* <div className="w-full py-4 md:py-10">
-					<h1 className="font-bold text-primary text-base md:text-lg text-center">
-						Follow us on our social media
-					</h1>
-				</div> */}
-
 				<div className="px-4 py-4 md:py-10 bg-white  w-full max-w-[42rem] mx-auto">
 					<form className="w-full  mb-6 ">
 						<div className="my-6">
@@ -124,14 +92,14 @@ export default function Contact() {
 				</div>
 
 				<div className="hidden h-[20rem] md:h-[30rem] lg:h-[40rem] w-full p-4">
-					{isLoaded ? (
+					{/* {isLoaded ? (
 						<GoogleMap
 							mapContainerStyle={containerStyle}
 							center={center}
 							zoom={50}>
 							<Marker position={location} />
 						</GoogleMap>
-					) : null}
+					) : null} */}
 				</div>
 			</article>
 		</section>

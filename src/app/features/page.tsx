@@ -4,7 +4,7 @@ import React from "react";
 import PlayStore from "@/app/assets/GooglePlay.svg";
 import AppStore from "@/app/assets/AppStore.svg";
 
-import Lady from "@/app/assets/Lady.svg";
+import Lady from "@/app/assets/Lady.webp";
 
 const data = [
 	{

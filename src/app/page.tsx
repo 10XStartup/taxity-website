@@ -1,6 +1,6 @@
 import PlayStore from "./assets/GooglePlay.svg";
 import AppStore from "./assets/AppStore.svg";
-import Phone from "./assets/Phone.svg";
+import Phone from "./assets/Phone.webp";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";

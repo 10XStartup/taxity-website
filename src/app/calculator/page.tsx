@@ -8,9 +8,6 @@ import React, {
 	useRef,
 	useState,
 } from "react";
-import Note from "../assets/Note.svg";
-import Phone2 from "../assets/Phone2.svg";
-import Instagram from "../assets/Instagram.svg";
 
 import {
 	DirectionsRenderer,
@@ -19,13 +16,11 @@ import {
 	useJsApiLoader,
 } from "@react-google-maps/api";
 import axios from "axios";
-import { AddRoles } from "../components/TagInput";
 import Button from "../components/Button";
 import Loader from "../components/Loader";
-import dayjs from "dayjs";
 import DatePicker from "react-datepicker";
 
-import { Checkbox, Chip, MenuItem, Select, selectClasses } from "@mui/material";
+import { Checkbox, MenuItem, Select } from "@mui/material";
 import "react-datepicker/dist/react-datepicker.css";
 // import Input from "./Input";
 

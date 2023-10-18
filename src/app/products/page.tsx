@@ -6,7 +6,7 @@ import AppStore from "@/app/assets/AppStore.svg";
 
 import Arrow from "@/app/assets/Arrow.svg";
 import Thumbsup from "@/app/assets/Thumbsup.svg";
-import ProductImage from "@/app/assets/ProductImage.svg";
+import ProductImage from "@/app/assets/ProductImage.webp";
 
 const data = [
 	{
