@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import PlayStore from "@/app/assets/GooglePlay.svg";
-import AppStore from "@/app/assets/AppStore.svg";
+// import PlayStore from "@/app/assets/GooglePlay.svg";
+import PlayStore from '../assets/GooglePlay.svg'
+import AppStore from "../assets/AppStore.svg";
 
 import Arrow from "@/app/assets/Arrow.svg";
 import Thumbsup from "@/app/assets/Thumbsup.svg";
